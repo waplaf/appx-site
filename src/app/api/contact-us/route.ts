@@ -20,7 +20,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     const body: ContactFormBody = await request.json();
 
 
-    sendMail('lucasalbertofulano@gmail.com', 'Pedido de Candidatura',
+    sendMail(process.env.EMAIL_RECEIVER, 'Quero vossos servicos',
 
         `
 <!DOCTYPE html>
